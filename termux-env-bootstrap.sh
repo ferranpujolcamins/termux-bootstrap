@@ -1,26 +1,27 @@
 #!/bin/sh
 
-echo "\nInstall GH & git:\n"
+echo "Install GH & git:"
 pkg update
 pkg upgrade -y
 pkg install -y \
     gh \
     git
 
-echo "\nLogin to GH:\n"
+echo "Login to GH:"
 gh auth login -h GitHub.com -p ssh
 
-echo "\nClone the repo:\n"
+echo "Clone the repo:"
 gh repo clone ferranpujolcamins/termux-bootstrap ~/.termux-bootstrap
 cd 
 
-echo "\nSet up git:\n"
-eval "$(gh gist view --raw 7be636e10838e7454338af935bf66beb | tail -n +2)"
+echo "Set up git:"
+gh gist clone 7be636e10838e7454338af935bf66beb .git_config
+.git_config/git_config.sh
 
-echo "\nAdd scripts to path:\n"
+echo "Add scripts to path:"
 touch ~/.bashrc
 echo "export PATH=$PATH:~/.termux-bootstrap\n" >> ~/.bashrc
 source ~/.bashrc
 
-echo "\nCall setup script:\n"
+echo "Call setup script:"
 termux-env-setup
