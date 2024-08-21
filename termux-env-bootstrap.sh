@@ -24,7 +24,7 @@ chmod +x ~/.termux-bootstrap/.git_config/git_config.sh
 
 echo "Add scripts to path:"
 touch ~/.bashrc
-echo "export PATH=$PATH:~/.termux-bootstrap\n" >> ~/.bashrc
+echo "export PATH=$PATH:~/.termux-bootstrap" >> ~/.bashrc
 source ~/.bashrc
 
 echo "Call setup script:"
