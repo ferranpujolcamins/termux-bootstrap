@@ -16,7 +16,8 @@ cd
 
 echo "Set up git:"
 gh gist clone 7be636e10838e7454338af935bf66beb .git_config
-.git_config/git_config.sh
+chmod +x .termux-bootstrap/git_config/git_config.sh
+.termux-bootstrap/.git_config/git_config.sh
 
 echo "Add scripts to path:"
 touch ~/.bashrc
