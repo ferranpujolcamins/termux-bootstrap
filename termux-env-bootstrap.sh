@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo "Set inconsolata font"
-rm .termux/font.ttf
 curl -o .termux/font.ttf https://raw.githubusercontent.com/googlefonts/Inconsolata/fc1fc21081558b39a2db43bfd9b65bf9acb50701/fonts/ttf/Inconsolata-Regular.ttf
 termux-reload-settings
 
