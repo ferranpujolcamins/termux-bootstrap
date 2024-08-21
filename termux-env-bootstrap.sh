@@ -18,9 +18,9 @@ echo "Clone the repo:"
 gh repo clone ferranpujolcamins/termux-bootstrap ~/.termux-bootstrap
 
 echo "Set up git:"
-gh gist clone 7be636e10838e7454338af935bf66beb .termux-bootstrap/.git_config
-chmod +x .termux-bootstrap/.git_config/git_config.sh
-.termux-bootstrap/.git_config/git_config.sh
+gh gist clone 7be636e10838e7454338af935bf66beb ~/.termux-bootstrap/.git_config
+chmod +x ~/.termux-bootstrap/.git_config/git_config.sh
+~/.termux-bootstrap/.git_config/git_config.sh
 
 echo "Add scripts to path:"
 touch ~/.bashrc
