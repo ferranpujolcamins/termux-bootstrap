@@ -11,7 +11,7 @@ pkg install -y \
 gh auth login -h GitHub.com -p ssh
 
 # setup git
-eval $(gh gist view --raw 7be636e10838e7454338af935bf66beb | tail -n +2)
+eval "$(gh gist view --raw 7be636e10838e7454338af935bf66beb | tail -n +2)"
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub
 
