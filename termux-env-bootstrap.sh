@@ -16,7 +16,6 @@ gh auth login -h GitHub.com -p ssh
 
 echo "Clone the repo:"
 gh repo clone ferranpujolcamins/termux-bootstrap ~/.termux-bootstrap
-cd 
 
 echo "Set up git:"
 gh gist clone 7be636e10838e7454338af935bf66beb .termux-bootstrap/.git_config
