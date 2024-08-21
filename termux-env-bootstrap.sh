@@ -21,7 +21,7 @@ gh repo clone ferranpujolcamins/termux-bootstrap ~/.termux-bootstrap
 # add scripts to path
 touch ~/.bashrc
 echo "export PATH=$PATH:~/.termux-bootstrap\n" >> ~/.bashrc
-source /.bashrc
+source ~/.bashrc
 
 # call setup script
 termux-env-setup
