@@ -3,4 +3,10 @@
 pkg update
 pkg upgrade -y
 pkg install -y \
-    emacs
+    gh \
+    git \
+    build-essential \
+    emacs \
+    python \
+    python-numpy \
+    matplotlib
