@@ -9,4 +9,8 @@ pkg install -y \
     emacs \
     python \
     python-numpy \
+    python-scipy \
     matplotlib
+
+pip install \
+    lcapy==1.24
