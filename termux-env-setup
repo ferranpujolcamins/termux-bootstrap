@@ -6,6 +6,7 @@ pkg install -y \
     git \
     build-essential \
     emacs \
+    openssh \
     python \
     python-numpy \
     python-scipy \
