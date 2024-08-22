@@ -10,7 +10,6 @@ pkg install -y \
     man \
     openssh \
     termux-api \
-    zsh \
     python \
     python-numpy \
     python-scipy \
