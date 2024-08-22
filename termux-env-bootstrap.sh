@@ -60,12 +60,18 @@ echo "Setup ZSH:"
 echo "=========="
 cp ~/.termux-bootstrap/.zshrc ~/.zshrc
 pkg install -y zsh
-# The oh-my-zsh installer already activates zsh shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" \
     "" --keep-zshrc --unattended
+chsh -s zsh
 
 echo ""
 echo "=================="
 echo "Call setup script:"
 echo "=================="
 termux-env-setup
+
+echo ""
+echo "=============="
+echo "Switch to ZSH:"
+echo "=============="
+exec zsh -l
