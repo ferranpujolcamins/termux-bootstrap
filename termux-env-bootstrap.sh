@@ -19,7 +19,7 @@ rm -rf ~/.config/gh
 
 echo "Clone the repo:"
 rm -rf ~/.termux-bootstrap/
-gh repo clone ferranpujolcamins/termux-bootstrap ~/.termux-bootstrap
+git clone git@github.com:ferranpujolcamins/termux-bootstrap.git ~/.termux-bootstrap
 
 echo "Set up git:"
 git clone git@gist.github.com:7be636e10838e7454338af935bf66beb.git \
