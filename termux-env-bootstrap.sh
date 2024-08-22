@@ -33,6 +33,11 @@ echo "Clone the repo:"
 echo "==============="
 rm -rf ~/.termux-bootstrap/
 git clone git@github.com:ferranpujolcamins/termux-bootstrap.git ~/.termux-bootstrap
+if [ -z "$( ls -A '~/.termux-bootstrap/' )" ]; then
+   echo "Couldn't clone the repo. Have you set up an ssh key?"
+   exit 1
+fi
+
 
 echo ""
 echo "==========="
