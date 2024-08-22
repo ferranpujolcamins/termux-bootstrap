@@ -3,11 +3,14 @@
 pkg update
 pkg upgrade -y
 pkg install -y \
-    git \
     build-essential \
     emacs \
+    git \
+    lazygit \
+    man \
     openssh \
     termux-api \
+    zsh \
     python \
     python-numpy \
     python-scipy \
