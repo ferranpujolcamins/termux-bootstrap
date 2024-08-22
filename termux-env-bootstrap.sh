@@ -2,7 +2,7 @@
 
 echo "Set inconsolata font"
 rm -f .termux/font.ttf
-curl -o .termux/font.ttf https://raw.githubusercontent.com/googlefonts/Inconsolata/fc1fc21081558b39a2db43bfd9b65bf9acb50701/fonts/ttf/Inconsolata-Regular.ttf
+curl -fsSL -o .termux/font.ttf https://raw.githubusercontent.com/googlefonts/Inconsolata/fc1fc21081558b39a2db43bfd9b65bf9acb50701/fonts/ttf/Inconsolata-Regular.ttf
 termux-reload-settings
 
 echo "Install GH & git:"
@@ -28,14 +28,11 @@ chmod +x ~/.termux-bootstrap/.git_config/git_config.sh
 ~/.termux-bootstrap/.git_config/git_config.sh
 
 echo "Setup ZSH"
-rm -f ~/.zshrc
+cp ~/.termux-bootstrap/.zshrc ~/.zshrc
 pkg install -y zsh
 # The oh-my-zsh installer already activates zsh shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "Add scripts to path:"
-echo "export PATH=$PATH:~/.termux-bootstrap" >> ~/.zshrc
-source ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" \
+    "" --keep-zshrc
 
 echo "Call setup script:"
 termux-env-setup
