@@ -17,7 +17,8 @@ pkg update
 pkg upgrade -y
 pkg install -y \
     gh \
-    git
+    git \
+    openssh
 
 echo ""
 echo "==========================="
