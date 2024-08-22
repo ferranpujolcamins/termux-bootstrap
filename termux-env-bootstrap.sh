@@ -14,7 +14,7 @@ pkg install -y \
 
 echo "Login to GH to set ssh key:"
 gh auth login -h GitHub.com -p ssh
-pkg uninstall gh
+pkg uninstall -y gh
 rm -rf ~/.config/gh
 
 echo "Clone the repo:"
@@ -33,7 +33,7 @@ echo "export PATH=$PATH:~/.termux-bootstrap" >> ~/.zshrc
 source ~/.zshrc
 
 echo "Setup ZSH"
-pkg install zsh
+pkg install -y zsh
 chsh -s zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
