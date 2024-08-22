@@ -22,6 +22,10 @@ gh gist clone 7be636e10838e7454338af935bf66beb ~/.termux-bootstrap/.git_config
 chmod +x ~/.termux-bootstrap/.git_config/git_config.sh
 ~/.termux-bootstrap/.git_config/git_config.sh
 
+echo "Uninstall gh and clean tokens"
+pkg uninstall gh
+rm -rf ~/.config/gh
+
 echo "Add scripts to path:"
 touch ~/.bashrc
 echo "export PATH=$PATH:~/.termux-bootstrap" >> ~/.bashrc
