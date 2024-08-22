@@ -68,7 +68,8 @@ echo ""
 echo "=================="
 echo "Call setup script:"
 echo "=================="
-termux-env-setup
+# This isn't in the PATH just yet
+~/.termux-bootstrap/termux-env-setup
 
 echo ""
 echo "=============="
