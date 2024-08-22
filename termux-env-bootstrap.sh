@@ -34,7 +34,7 @@ source ~/.zshrc
 
 echo "Setup ZSH"
 pkg install -y zsh
-chsh -s zsh
+# The oh-my-zsh installer already activates zsh shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Call setup script:"
