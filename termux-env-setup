@@ -1,6 +1,17 @@
 #!/bin/sh
 set -e
 
+echo ""
+echo "================"
+echo "Update ~/.zshrc:"
+echo "================"
+git -C ~/.termux-bootstrap/ pull
+cp ~/.termux-bootstrap/.zshrc ~/.zshrc
+
+echo ""
+echo "================="
+echo "Install packages:"
+echo "================="
 pkg update
 pkg upgrade -y
 pkg install -y \
@@ -12,10 +23,16 @@ pkg install -y \
     openssh \
     termux-api \
     zsh \
+
+echo ""
+echo "========================"
+echo "Install python packages:"
+echo "========================"
+pkg upgrade -y
+pkg install -y \
     python \
     python-numpy \
     python-scipy \
     matplotlib
-
 pip install \
     lcapy==1.24
