@@ -27,15 +27,15 @@ git clone git@gist.github.com:7be636e10838e7454338af935bf66beb.git \
 chmod +x ~/.termux-bootstrap/.git_config/git_config.sh
 ~/.termux-bootstrap/.git_config/git_config.sh
 
-echo "Add scripts to path:"
-rm -f ~/.zshrc
-echo "export PATH=$PATH:~/.termux-bootstrap" >> ~/.zshrc
-source ~/.zshrc
-
 echo "Setup ZSH"
+rm -f ~/.zshrc
 pkg install -y zsh
 # The oh-my-zsh installer already activates zsh shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Add scripts to path:"
+echo "export PATH=$PATH:~/.termux-bootstrap" >> ~/.zshrc
+source ~/.zshrc
 
 echo "Call setup script:"
 termux-env-setup
