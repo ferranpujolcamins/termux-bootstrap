@@ -43,7 +43,7 @@ fi
 if [ -z "$( ls -A '~/.termux-bootstrap' )" ]; then
     echo "Repo was not cloned. Have you set up an ssh key?"
     exit 1
-else
+fi
 
 echo ""
 echo "==========="
