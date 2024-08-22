@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 echo "Set inconsolata font"
 rm -f .termux/font.ttf
