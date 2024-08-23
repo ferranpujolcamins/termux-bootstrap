@@ -1,0 +1,15 @@
+selected_scheme scheme-custom
+collection-basic 1
+collection-fontsrecommended 1
+collection-fontutils 1
+collection-formatsextra 1
+collection-langenglish 1
+collection-langeuropean 1
+collection-langspanish 1
+collection-latex 1
+collection-latexrecommended 1
+collection-luatex 1
+collection-mathscience 1
+collection-pictures 1
+collection-plaingeneric 1
+collection-xetex 1

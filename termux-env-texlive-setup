@@ -1,0 +1,7 @@
+echo ""
+echo "================="
+echo "Install tex-live:"
+echo "================="
+pkg update
+pkg install -y texlive-installer
+termux-install-tl --profile texlive.profile

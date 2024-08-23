@@ -70,6 +70,7 @@ echo "Call setup script:"
 echo "=================="
 # This isn't in the PATH just yet
 ~/.termux-bootstrap/termux-env-setup
+~/.termux-bootstrap/termux-env-texlive-setup
 
 echo ""
 echo "=============="
