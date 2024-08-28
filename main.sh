@@ -2,6 +2,15 @@
 set -e
 
 features=$(find features -maxdepth 1 -type f)
+
+for feature in $features
+do
+    if [ ! $(stat -c %A $feature | cut -c4) = "x" ]; then
+       echo "$feature is not executable. Aborting."
+       exit 1
+    fi
+done
+
 dialogOptions=$(for x in $features; do
 		    status="on"
 		    installed="(not_installed)"
