@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-features=$(find features -maxdepth 1 -type f)
+features=$(find features -maxdepth 1 -type f | sort)
 
 for feature in $features
 do
@@ -13,14 +13,14 @@ done
 
 dialogOptions=$(for x in $features; do
 		    status="on"
-		    installed="(not_installed)"
+		    installed="X"
 		    if $($x installed); then
 			status="off"
 			installed="(installed)";
 		    fi
 		    echo -n " $x $installed $status"
 		done;)
-
+exit
 selectedFeatures=$(dialog \
 		       --output-fd 1 \
 		       --erase-on-exit \
