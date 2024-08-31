@@ -20,7 +20,7 @@ dialogOptions=$(for x in $features; do
 		    fi
 		    echo -n " $x $installed $status"
 		done;)
-exit
+
 selectedFeatures=$(dialog \
 		       --output-fd 1 \
 		       --erase-on-exit \
