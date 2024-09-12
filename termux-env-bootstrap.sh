@@ -7,7 +7,7 @@ echo "Set inconsolata font:"
 echo "===================="
 rm -f .termux/font.ttf
 curl -fsSL -o .termux/font.ttf https://raw.githubusercontent.com/googlefonts/Inconsolata/fc1fc21081558b39a2db43bfd9b65bf9acb50701/fonts/ttf/Inconsolata-Regular.ttf
-#termux-reload-settings
+termux-reload-settings
 
 echo ""
 echo "================="
@@ -76,4 +76,4 @@ echo ""
 echo "=============="
 echo "Switch to ZSH:"
 echo "=============="
-exec zsh -l
+exec zsh -l  # TODO
