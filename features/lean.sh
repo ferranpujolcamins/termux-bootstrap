@@ -8,7 +8,7 @@ elif [ "$1" = "install" ]; then
     git clone https://github.com/leanprover/elan ~/.elan
     cargo build --manifest-path ~/.elan/Cargo.toml
     mkdir -p ~/.bin
-    ln -s ~/.elan/target/debug/elan-init \
+    ln -sf ~/.elan/target/debug/elan-init \
        ~/.bin/elan
 fi
 
