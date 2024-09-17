@@ -2,13 +2,12 @@
 set -e
 
 if [ "$1" = "installed" ]; then
-    exit 1
+    dpkg -l | grep -q -e "^ii.*python"
 elif [ "$1" = "install" ]; then
     pkg install -y \
-	build-essential \
-	fontconfig-utils \
-	man \
-	rust \
-	termux-api \
-	which
+	python \
+	python-numpy \
+	python-scipy \
+	matplotlib
 fi
+
