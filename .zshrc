@@ -29,3 +29,5 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export PATH=$PATH:~/.termux-bootstrap:~/.bin
+
+alias termux-backup="tar -c --use-compress-program=pigz -f /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./usr"
