@@ -6,6 +6,7 @@ if [ "$1" = "installed" ]; then
 elif [ "$1" = "install" ]; then
     pkg install -y \
 	fontconfig-utils \
+	build-essential \
 	rust \
 	which
 fi
