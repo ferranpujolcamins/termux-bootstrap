@@ -36,3 +36,6 @@ do
     echo "==========================="
     eval "$feature install"
 done
+
+# Switch to zsh
+exec zsh -l
